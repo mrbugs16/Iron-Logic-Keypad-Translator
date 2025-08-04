@@ -46,8 +46,8 @@ namespace IronLogicKeyPad
                 }
 
                 // SPACE --> 0 
-                if (currentChar == '0')
-                {
+                if (currentChar == ' ')
+                { 
                     continue;
                 }
 
@@ -58,6 +58,7 @@ namespace IronLogicKeyPad
                     pressCount++;
                     i++;
                 }
+                
                 if (keyMap.ContainsKey(currentChar))
                 {
                     string charactersOnKey = keyMap[currentChar];
@@ -66,6 +67,8 @@ namespace IronLogicKeyPad
                     resultBuilder.Append(charactersOnKey[charIndex]);
                 }
             }
+
+
             return resultBuilder.ToString();
         }
     }
