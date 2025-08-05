@@ -47,7 +47,7 @@ namespace IronLogicKeyPad
 
                 // SPACE --> 0 
                 if (currentChar == ' ')
-                { 
+                {
                     continue;
                 }
 
@@ -58,11 +58,12 @@ namespace IronLogicKeyPad
                     pressCount++;
                     i++;
                 }
-                
+
+                // CONVERTING LETTERS 
                 if (keyMap.ContainsKey(currentChar))
                 {
                     string charactersOnKey = keyMap[currentChar];
-                    int charIndex = (pressCount - 1) % charactersOnKey.Length;
+                    int charIndex = (pressCount - 1) ;
 
                     resultBuilder.Append(charactersOnKey[charIndex]);
                 }
@@ -73,3 +74,4 @@ namespace IronLogicKeyPad
         }
     }
 }
+
